@@ -1,27 +1,32 @@
-import { createSlice } from '@reduxjs/toolkit'
-import type { PayloadAction } from '@reduxjs/toolkit'
+import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+import { IUser, IUsersState } from '@/types/IUser';
 
-interface CounterState {
-  value: number
-}
+const initialState: IUsersState = {
+  data: [],
+  loading: true,
+  error: null,
+};
 
-const initialState = { value: 0 } satisfies CounterState as CounterState
-
-const counterSlice = createSlice({
-  name: 'counter',
+const usersSlice = createSlice({
+  name: "users",
   initialState,
   reducers: {
-    increment(state) {
-      state.value++
+    fetchUsersStart(state) {
+      state.loading = true;
+      state.error = null;
     },
-    decrement(state) {
-      state.value--
+    fetchUsersSuccess(state, action: PayloadAction<IUser[]>) {
+      state.loading = false;
+      state.data = action.payload;
     },
-    incrementByAmount(state, action: PayloadAction<number>) {
-      state.value += action.payload
+    fetchUsersFailure(state, action: PayloadAction<string>) {
+      state.loading = false;
+      state.error = action.payload;
     },
   },
-})
+});
 
-export const { increment, decrement, incrementByAmount } = counterSlice.actions
-export default counterSlice.reducer
+export const { fetchUsersStart, fetchUsersSuccess, fetchUsersFailure } =
+  usersSlice.actions;
+
+export default usersSlice.reducer;
