@@ -11,17 +11,6 @@
     color: #333;
 }
 
-.loading {
-    text-align: center;
-    font-size: 18px;
-}
-
-.error {
-    color: red;
-    text-align: center;
-    font-weight: bold;
-}
-
 .list {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
@@ -64,4 +53,5 @@
     box-shadow: 0 2px 6px rgba(211, 47, 47, 0.3);
     max-width: 400px;
     text-align: center;
+    margin: 0 auto;
 }
