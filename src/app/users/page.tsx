@@ -20,6 +20,7 @@ const UsersList = () => {
 
     useEffect(() => {
         const fetchUsers = async () => {
+            if (data.length > 0) return;
             dispatch(fetchUsersStart());
             try {
                 const response = await api.get("/users");
