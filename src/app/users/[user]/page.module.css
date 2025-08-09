@@ -1,0 +1,89 @@
+.container {
+  padding: 16px;
+  max-width: 700px;
+  margin: 0 auto;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #222;
+  background-color: #f9f9f9;
+  min-height: 100vh;
+}
+
+.backButton {
+  display: inline-block;
+  margin-bottom: 20px;
+  padding: 10px 18px;
+  border: 1.5px solid #0070f3;
+  border-radius: 6px;
+  background-color: #fff;
+  color: #0070f3;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.25s ease, color 0.25s ease;
+  user-select: none;
+}
+
+.backButton:hover {
+  background-color: #0070f3;
+  color: white;
+}
+
+.message {
+  font-size: 18px;
+  margin: 16px 0;
+  text-align: center;
+}
+
+.error {
+  color: #cc0000;
+  font-weight: 600;
+}
+
+.card {
+  background-color: white;
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.title {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 14px;
+  color: #111;
+}
+
+.infoRow {
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.infoLabel {
+  font-weight: 600;
+  margin-right: 6px;
+  color: #555;
+}
+
+.link {
+  color: #0070f3;
+  text-decoration: none;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+.section {
+  margin-top: 20px;
+}
+
+.sectionTitle {
+  font-weight: 700;
+  font-size: 18px;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.italic {
+  font-style: italic;
+  color: #666;
+}
